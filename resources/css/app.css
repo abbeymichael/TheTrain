@@ -111,11 +111,11 @@
 
 @utility card-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-@utility card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -12px rgba(84, 106, 123, 0.18);
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -12px rgba(84, 106, 123, 0.18);
+    }
 }
 
 @utility nav-active {
@@ -131,10 +131,10 @@
 @utility hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
 
-@utility hide-scrollbar::-webkit-scrollbar {
-    display: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 /* Alpine / Livewire cloak */
