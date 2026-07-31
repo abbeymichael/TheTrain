@@ -3,7 +3,7 @@
 > Working plan derived from `agent.md`. Updated by AI agents as work progresses.
 > Last updated: 2026-07-31
 
-## ✅ Done (this session — 2026-07-31)
+## ✅ Done (this session — 2026-07-31, `second-round` branch)
 
 - [x] Read `agent.md` fully; picked up **database foundation** as this session's scope
       (agent.md Section 14, priorities 1–4 — everything else depends on it).
@@ -28,15 +28,21 @@
       with `is_sensitive` flags; wired into `DatabaseSeeder`.
 - [x] `role:admin` / `role:specialist` middleware (`App\Http\Middleware\EnsureUserHasRole`)
       registered as `role` alias in `bootstrap/app.php` (agent.md §11 hard requirement).
+- [x] Public pages converted from `tailwindhtml files/` into Livewire 4 components:
+  - [x] `resources/css/app.css` — Tailwind 4 theme tokens (colors, fonts, sizes, spacing) matching the design palette.
+  - [x] `resources/js/app.js` — public-layout progressive enhancements (navbar shadow, card hover).
+  - [x] `App\Livewire\Public\HomePage` + view (`livewire/public/home-page.blade.php`) — hero, features, how it works, testimonials, CTA.
+  - [x] `App\Livewire\Public\TripsList` + view — filterable upcoming trips by cadence, location, and challenge track.
+  - [x] `App\Livewire\Public\TripShow` + view — single trip detail with challenge tracks, pricing breakdown, food opt-out, assigned specialists, and booking CTA.
+  - [x] `resources/views/layouts/public.blade.php` — public nav + footer, Vite assets, Livewire styles/scripts.
+- [x] `App\Livewire\Admin\ChallengesManager` + view — full CRUD for dynamic challenge list, including create/edit, toggle active, soft-delete guard, and search/pagination.
+- [x] `resources/views/layouts/admin.blade.php` — admin sidebar layout with navigation, user card, and logout.
+- [x] `routes/web.php` — wired public routes and role-protected `/admin/*` and `/specialist/*` placeholders; `role:admin` / `role:specialist` middleware applied per agent.md §11.
 
 ## 🔲 Next Up (agent.md §14, remaining priorities)
 
 - [ ] Stripe webhook handler — `payment_intent.succeeded` / `checkout.session.completed`
       → `stripe_verified = true`, `status = confirmed` (§14.5). Requires `stripe/stripe-php`.
-- [ ] Public pages from `tailwindhtml files/` — convert `home.html`, `trips.html`,
-      `trip detail.html` into Livewire components `Public\HomePage`, `Public\TripsList`,
-      `Public\TripShow` + `layouts.public` (§8 routes).
-- [ ] `Admin\ChallengesManager` — CRUD for dynamic challenge list (§10).
 - [ ] `Admin\TripSeriesManager` (§10).
 - [ ] `Admin\TripEditor` — pricing breakdown + food deduction rule config (§14.6).
 - [ ] `Admin\TripSpecialistAssigner` (§14.7).
@@ -54,3 +60,5 @@
   deduction type); user-facing lists stay in tables (agent.md §12).
 - `specialists.status` uses its own lifecycle enum (`pending_verification`, `verified`,
   `active`, `inactive`, `rejected`) per §2 — separate from `users.status`.
+- Public images use Unsplash source URLs as placeholders; replace with production assets later.
+- Auth routes (`/login`, `/register`) are temporary redirects until Laravel Fortify is installed.
