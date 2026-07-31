@@ -20,6 +20,10 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'status' => 'approved',
         ]);
+
+        // Initial dynamic challenge list (agent.md Sections 4 & 14).
+        $this->call(ChallengeSeeder::class);
     }
 }
