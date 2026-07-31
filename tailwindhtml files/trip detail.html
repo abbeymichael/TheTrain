@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trip Details - TheTrain</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#aacfba",
+                    "secondary-fixed-dim": "#b2c9dd",
+                    "surface-dim": "#dbdad7",
+                    "outline-variant": "#c1c8c2",
+                    "on-tertiary-fixed-variant": "#6f3728",
+                    "secondary-container": "#cbe3f7",
+                    "on-secondary-fixed-variant": "#334959",
+                    "secondary-fixed": "#cee5f9",
+                    "on-surface": "#1b1c1a",
+                    "on-primary-container": "#f5fff7",
+                    "inverse-on-surface": "#f2f0ed",
+                    "on-secondary-container": "#4f6576",
+                    "on-tertiary-fixed": "#380d03",
+                    "primary-container": "#5a7c6a",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#2c4d3d",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#002114",
+                    "surface-container": "#efeeeb",
+                    "tertiary": "#884b3b",
+                    "on-background": "#1b1c1a",
+                    "on-error": "#ffffff",
+                    "primary": "#416352",
+                    "on-surface-variant": "#414844",
+                    "surface-container-high": "#eae8e5",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffdbd1",
+                    "primary-fixed-dim": "#aacfba",
+                    "surface": "#fbf9f6",
+                    "on-secondary-fixed": "#051e2c",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed": "#c6ebd5",
+                    "surface-bright": "#fbf9f6",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e4e2df",
+                    "tertiary-container": "#a56351",
+                    "inverse-surface": "#30312f",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e4e2df",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#446554",
+                    "background": "#fbf9f6",
+                    "surface-container-low": "#f5f3f0",
+                    "outline": "#727973",
+                    "secondary": "#4b6172",
+                    "tertiary-fixed-dim": "#ffb5a1",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-margin": "32px",
+                    "gutter": "24px",
+                    "lg": "24px",
+                    "unit": "8px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "xs": "4px",
+                    "xl": "40px"
+            },
+            "fontFamily": {
+                    "display-lg": ["\"Source Serif 4\""],
+                    "headline-md": ["\"Source Serif 4\""],
+                    "body-md": ["Manrope"],
+                    "headline-lg-mobile": ["\"Source Serif 4\""],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["\"Source Serif 4\""],
+                    "label-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .custom-shadow {
+        box-shadow: 0 10px 30px -5px rgba(84, 106, 123, 0.12);
+      }
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -10px rgba(84, 106, 123, 0.15);
+        transition: all 0.3s ease;
+      }
+      .bg-glass {
+        backdrop-filter: blur(8px);
+        background-color: rgba(251, 249, 246, 0.8);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-container-margin py-md max-w-7xl mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">TheTrain</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 transition-colors duration-300" href="#">Browse Trips</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">How it Works</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="font-label-md text-label-md px-md py-sm rounded-xl text-primary hover:bg-primary/5 transition-all">Login</button>
+<button class="font-label-md text-label-md px-lg py-sm bg-primary text-on-primary rounded-xl shadow-sm hover:opacity-90 active:scale-[0.99] transition-all">Register</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[70vh] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A serene landscape of rolling mist-covered hills in the Scottish Highlands at dawn. The lighting is ethereal and soft, with cool blue and muted sage tones reflecting a restorative and calm atmosphere. The composition is expansive, emphasizing peace, solitude, and the quiet beauty of nature in a modern minimalist editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZM7vVRoJqz0p9w_ZouTOPqr0tlN7Kcl9wC4fc_qp887eei4Z8ehdSPzWsdRQ-WyWwXel939rJ3DKVpkZeNyvnHYcc1-7rgL-yGZ7UtEJ7Oz_ebtuSR-Vnr6pCG_zFv9Y8xJAAaVWtqUsGaCqHUCGRzUANk3TyHXRQa4MQ1mpyDUI0ToG81Lw8xac-Jv28bq9dZgfX1b3zN_kpDjBevdx0y4JBNjNq8pqSjxb7nlM2qZFY5AEkBjWLug')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full px-container-margin py-xl max-w-7xl mx-auto text-on-primary">
+<div class="flex flex-wrap gap-sm mb-md">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full border border-white/20 font-label-md text-label-md">Support Track: Burnout</span>
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full border border-white/20 font-label-md text-label-md">7 Days</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-sm">The Highland Restoration Retreat</h1>
+<div class="flex flex-wrap items-center gap-lg">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="font-label-md text-label-md">Oct 14 — Oct 21, 2024</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span class="font-label-md text-label-md">Glencoe Valley, Scotland</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & Value Card -->
+<section class="px-container-margin py-xl max-w-7xl mx-auto -mt-16 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<div class="lg:col-span-2 bg-surface-container-lowest p-lg rounded-xl custom-shadow border border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between gap-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">The All-Inclusive Journey</h2>
+<p class="text-on-surface-variant max-w-xl">Every detail of your restoration is handled. From specialized psychological support to luxury eco-accommodation and tailored nutrition, we ensure your only focus is your well-being.</p>
+</div>
+<div class="bg-surface-container-low p-lg rounded-xl flex flex-col items-center justify-center min-w-[200px] border border-outline-variant/20">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Starting at</span>
+<div class="text-primary font-display-lg text-headline-lg font-bold">$3,450</div>
+<span class="text-on-surface-variant text-sm text-center mt-xs">All-inclusive fee</span>
+</div>
+</div>
+<div class="mt-lg pt-lg border-t border-outline-variant/30 flex items-start gap-md bg-primary-fixed/20 p-md rounded-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">restaurant</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-primary-fixed mb-xs">Food Opt-out Benefit</h4>
+<p class="text-sm text-on-primary-fixed-variant leading-relaxed">Prefer to explore local cuisine or follow a strictly personal dietary plan? Opt-out of the internal meal program to receive a <strong class="text-primary">$450 credit</strong> toward your trip balance.</p>
+</div>
+</div>
+</div>
+<div class="bg-primary p-lg rounded-xl custom-shadow text-on-primary flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-md">Ready for Restoration?</h3>
+<ul class="space-y-md">
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-inverse-primary">check_circle</span>
+<span class="text-sm">Personalized Wellness Roadmap</span>
+</li>
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-inverse-primary">check_circle</span>
+<span class="text-sm">Private Eco-Suite Stay</span>
+</li>
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-inverse-primary">check_circle</span>
+<span class="text-sm">24/7 Support Access</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-white text-primary font-label-md text-label-md py-md rounded-xl mt-xl hover:bg-surface-container-low transition-colors font-bold uppercase tracking-wide">Book This Trip</button>
+</div>
+</div>
+</section>
+<!-- Challenge Tracks -->
+<section class="bg-surface-container-low py-xl">
+<div class="px-container-margin max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Focused Support Tracks</h2>
+<p class="text-on-surface-variant">Tailored therapeutic paths integrated into your travel experience.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Track 1 -->
+<div class="bg-white p-lg rounded-xl border border-outline-variant/30 card-hover flex gap-lg items-start">
+<div class="bg-tertiary-fixed p-md rounded-lg text-tertiary">
+<span class="material-symbols-outlined text-[32px]">self_improvement</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Burnout Recovery</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-md">Specifically designed for professionals seeking to disconnect from systemic exhaustion. Focuses on nervous system regulation, digital detox, and reclaiming personal agency.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container-high px-sm py-xs rounded text-[12px] font-bold uppercase">Vagus Nerve Work</span>
+<span class="bg-surface-container-high px-sm py-xs rounded text-[12px] font-bold uppercase">Restorative Yoga</span>
+</div>
+</div>
+</div>
+<!-- Track 2 -->
+<div class="bg-white p-lg rounded-xl border border-outline-variant/30 card-hover flex gap-lg items-start">
+<div class="bg-secondary-fixed p-md rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[32px]">psychology</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Anxiety Management</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-md">A somatic-led track focused on grounding techniques and managing overstimulation. Learn to navigate transitions with calm and steady guidance.</p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container-high px-sm py-xs rounded text-[12px] font-bold uppercase">Somatic Release</span>
+<span class="bg-surface-container-high px-sm py-xs rounded text-[12px] font-bold uppercase">Nature Immersion</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Itinerary Section -->
+<section class="py-xl px-container-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<div class="lg:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface sticky top-32">The Flow of Your Retreat</h2>
+<p class="mt-md text-on-surface-variant">A balance of guided sessions, community connection, and expansive personal space.</p>
+</div>
+<div class="lg:col-span-8 space-y-lg">
+<!-- Day Group -->
+<div class="relative pl-8 border-l-2 border-primary/20">
+<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="mb-xl">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest font-bold">Days 1 - 2</span>
+<h3 class="font-headline-md text-headline-md mt-sm mb-md">Arrival &amp; Grounding</h3>
+<div class="space-y-md">
+<div class="bg-white p-md rounded-lg border border-outline-variant/20 custom-shadow">
+<h4 class="font-bold text-on-surface">Evening Welcome Circle</h4>
+<p class="text-sm text-on-surface-variant">Setting intentions and meeting your assigned specialist in an intimate yurt session.</p>
+</div>
+<div class="bg-white p-md rounded-lg border border-outline-variant/20 custom-shadow">
+<h4 class="font-bold text-on-surface">Forest Bathing &amp; Silence</h4>
+<p class="text-sm text-on-surface-variant">Gentle sensory engagement within the ancient Scots pine woodlands.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative pl-8 border-l-2 border-primary/20">
+<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="mb-xl">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest font-bold">Days 3 - 5</span>
+<h3 class="font-headline-md text-headline-md mt-sm mb-md">Deep Integration</h3>
+<div class="space-y-md">
+<div class="bg-white p-md rounded-lg border border-outline-variant/20 custom-shadow">
+<h4 class="font-bold text-on-surface">1-on-1 Specialist Session</h4>
+<p class="text-sm text-on-surface-variant">Deep dive into your specific support track with actionable takeaways.</p>
+</div>
+<div class="bg-white p-md rounded-lg border border-outline-variant/20 custom-shadow">
+<h4 class="font-bold text-on-surface">Creative Expression Workshops</h4>
+<p class="text-sm text-on-surface-variant">Clay work or therapeutic journaling overlooking the loch.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialists -->
+<section class="bg-surface-container-highest/30 py-xl">
+<div class="px-container-margin max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Expert Guidance</h2>
+<p class="text-on-surface-variant">Meet the clinical and holistic practitioners assigned to this journey.</p>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-xs hover:underline" href="#">
+                        View All Specialists <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Specialist 1 -->
+<div class="bg-white overflow-hidden rounded-xl custom-shadow border border-outline-variant/30">
+<div class="h-64 bg-cover bg-center" data-alt="A portrait of a serene female clinical psychologist with a warm smile, wearing a soft linen shirt. The background is a blurred minimalist office with natural wood and plants, conveying a supportive and professional yet approachable energy. Soft natural light illuminates her face, highlighting a trustworthy and calm persona. Modern editorial portrait style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXpLszRBPv5GFOuikSIHF1tNiRuQExI_Zbv13foZ_ujwIK38S2guUGhZ32mtQHGuozuaFZBMEE87zHSkpDdc6vOf8fthTPV_cF9R41UUi1PHVNg432Vf4PTpeFP7a-D0KCQ2IkEykghqaeEExw2imb3_3ALv5BXjzvDXG5k0zs1KCpGDh0EBFeHhQS7l7rPux0aCOZlGp5S5rC6zzKSZ3TTPSy4BFKYNuwsZURL95iKKK-zwMm8_7QFA')"></div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Dr. Elena Thorne</h3>
+<p class="text-primary font-label-md text-label-md mb-md">PhD, Clinical Psychology</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">Specializing in high-performance burnout and neuro-plasticity. Elena has helped over 500 professionals reclaim their mental clarity.</p>
+</div>
+</div>
+<!-- Specialist 2 -->
+<div class="bg-white overflow-hidden rounded-xl custom-shadow border border-outline-variant/30">
+<div class="h-64 bg-cover bg-center" data-alt="A portrait of a male somatic therapist with a peaceful expression, in his late 40s. He is dressed in a simple dark gray knit sweater. The setting is outdoors with a blurred forest background, emphasizing a connection to nature. The mood is steady and grounding, with a soft cool-toned color palette. High-end professional photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwtJKWGwXmilrHnPZiT41DL4OBqQ2_5W2lDOhnmb6cKI6TuYRSPH6Ha3UtWtbDUVomwPy4aDCvqoAkTVVCqBaSnG-p3lF7Ag6j4po8nAhe6i5xz3r9_GkSlykR4_gLyu743qrfOIU_5xqS-oXf5GIjbjqWG0kQg5YPIkPF5Ub1-FsalBW48nZPeLJaKL_QvJO4YDel311wV_vbtk9NtrJWSNZKwazvOSt5RP5t9-dKMsBdeHTmTPZK6A')"></div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Marcus Vance</h3>
+<p class="text-primary font-label-md text-label-md mb-md">SEP, Somatic Experiencing</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">Expert in body-led trauma release and nervous system regulation. Marcus facilitates grounding through physical awareness.</p>
+</div>
+</div>
+<!-- Specialist 3 -->
+<div class="bg-white overflow-hidden rounded-xl custom-shadow border border-outline-variant/30">
+<div class="h-64 bg-cover bg-center" data-alt="A portrait of a middle-aged woman who is a holistic wellness practitioner, with kind eyes and silver-streaked hair. She is wearing a soft cream-colored shawl. The background is a bright, minimalist studio with subtle hints of pottery and woven textures. The aesthetic is tactile, warm, and restorative. Soft, even lighting creates a welcoming and safe visual feeling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXPv7O_Vv432-r1fxf7_po4iBzPqsPhMDNlaOzMjqKK9Jj7BtafnZMFEld5DmCxuGozbhL2MUZoTMri9dcwS33DYb-4uuZpAMNbe11_03I9Rva_I7pdy6uRH8O5U8sks_QsZXZ9MOJ3VFPt7SvtWnqiw9u8BgTm2p672h8wb81k5MI9FRVQu7Cp7KOrPPPH2sWLQZ2XBAHdmQxwdoLWRg5DgYy3sWPgtXQHfUSsMVJRiFyr-LOJeHqPg')"></div>
+<div class="p-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Sarah Jenkins</h3>
+<p class="text-primary font-label-md text-label-md mb-md">Nutritionist &amp; Mindfulness Coach</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">Focused on the gut-brain axis and how nutritional restoration supports mental well-being during intense life transitions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Bottom -->
+<section class="py-xl px-container-margin text-center max-w-4xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-md">Take the first step toward restoration.</h2>
+<p class="text-on-surface-variant text-body-lg mb-xl">Spaces are limited to 12 participants per journey to ensure deep personal attention and safety.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-md">
+<button class="px-xl py-md bg-primary text-on-primary font-label-md text-label-md rounded-xl custom-shadow hover:scale-105 transition-all w-full sm:w-auto uppercase tracking-widest font-bold">Reserve Your Spot</button>
+<button class="px-xl py-md bg-transparent border-2 border-outline text-on-surface font-label-md text-label-md rounded-xl hover:bg-surface-container-low transition-all w-full sm:w-auto font-bold uppercase tracking-widest">Schedule a Call</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant/50 dark:border-outline/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl px-container-margin py-xl max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-4">TheTrain</div>
+<p class="text-on-surface-variant font-body-md text-sm leading-relaxed">© 2024 TheTrain Platform. Your journey to restoration starts here.</p>
+</div>
+<div class="md:col-span-1 flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">Platform</span>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">Browse Trips</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">How it Works</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">About</a>
+</div>
+<div class="md:col-span-1 flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">Support</span>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">Contact Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">Specialists</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">FAQ</a>
+</div>
+<div class="md:col-span-1 flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">Legal</span>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and simple effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+
+            // Smooth reveals for elements on scroll
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
