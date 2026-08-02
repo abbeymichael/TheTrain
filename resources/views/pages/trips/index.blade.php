@@ -1,10 +1,15 @@
 <?php
 // Livewire 4 SFC — Public\TripsList
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\Trip;
 use App\Models\Challenge;
 
-new class extends Component {
+new
+#[Layout('layouts::public')]
+#[Title('Browse Trips — TheTrain')]
+class extends Component {
     public string $search = '';
     public ?int $challengeFilter = null;
 
@@ -26,8 +31,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.public>
-    <x-slot:title>Browse Trips — TheTrain</x-slot:title>
+<div>
 
     <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 bg-[#fbf9f6]/90 backdrop-blur-md border-b border-[#c1c8c2]/30 shadow-sm">
@@ -147,4 +151,4 @@ new class extends Component {
             <p class="text-[12px] text-[#727973]">© {{ date('Y') }} TheTrain Platform. Your journey to restoration starts here.</p>
         </div>
     </footer>
-</x-layouts.public>
+</div>

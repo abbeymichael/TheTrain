@@ -1,8 +1,13 @@
 <?php
 // Livewire 4 SFC — Auth\Login
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-new class extends Component {
+new
+#[Layout('layouts::auth')]
+#[Title('Sign In')]
+class extends Component {
     public string $email = '';
     public string $password = '';
     public bool $remember = false;
@@ -32,8 +37,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.auth>
-    <x-slot:title>Sign In</x-slot:title>
+<div>
 
     <div class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(84,106,123,0.15)] border border-[#e4e7e5] p-8">
         <h2 class="text-2xl font-semibold text-[#1b1c1a] mb-1" style="font-family:'Source Serif 4',serif;">Welcome back</h2>
@@ -84,4 +88,4 @@ new class extends Component {
         Don't have an account?
         <a href="{{ route('register') }}" class="text-[#416352] font-semibold hover:text-[#2e4a3d] transition-colors">Register here</a>
     </p>
-</x-layouts.auth>
+</div>

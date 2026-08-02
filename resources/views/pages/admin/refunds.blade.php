@@ -1,10 +1,18 @@
 <?php
 // Livewire 4 SFC — Admin\RefundManager
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Trip;
 use App\Models\Booking;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title("Refunds — {$this->trip->title}");
+    }
+
     public Trip $trip;
     public string $refundNote = '';
 
@@ -54,9 +62,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Refunds — {{ $trip->title }}</x-slot:title>
-    <x-slot:heading>Refund Manager</x-slot:heading>
+<x-slot:heading>Refund Manager</x-slot:heading>
+
+<div>
 
     <div class="mb-4">
         <a href="{{ route('admin.trip.show', $trip) }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -150,4 +158,4 @@ new class extends Component {
             </div>
         @endif
     </div>
-</x-layouts.admin>
+</div>

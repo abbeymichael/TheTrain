@@ -1,9 +1,14 @@
 <?php
 // Livewire 4 SFC — Auth\VerifyEmail
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Illuminate\Auth\Events\Verified;
 
-new class extends Component {
+new
+#[Layout('layouts::auth')]
+#[Title('Verify Email')]
+class extends Component {
     public string $status = '';
 
     public function resend(): void
@@ -26,8 +31,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.auth>
-    <x-slot:title>Verify Email</x-slot:title>
+<div>
 
     <div class="bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(84,106,123,0.15)] border border-[#e4e7e5] p-8 text-center">
         <!-- Icon -->
@@ -62,4 +66,4 @@ new class extends Component {
             </form>
         </div>
     </div>
-</x-layouts.auth>
+</div>

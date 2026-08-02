@@ -1,9 +1,14 @@
 <?php
 // Livewire 4 SFC — Admin\TripSeriesManager
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\TripSeries;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+#[Title('Trip Series')]
+class extends Component {
     public bool $showForm = false;
     public ?int $editingId = null;
     public string $title = '';
@@ -135,9 +140,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Trip Series</x-slot:title>
-    <x-slot:heading>Trip Series</x-slot:heading>
+<x-slot:heading>Trip Series</x-slot:heading>
+
+<div>
 
     @if (session('success'))
         <div class="mb-4 flex items-center gap-2 bg-[#f0faf5] border border-[#c6ebd5] text-[#2e4a3d] text-sm px-4 py-3 rounded-lg">
@@ -312,4 +317,4 @@ new class extends Component {
             </div>
         @endforelse
     </div>
-</x-layouts.admin>
+</div>

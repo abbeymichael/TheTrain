@@ -1,11 +1,16 @@
 <?php
 // Livewire 4 SFC — Admin\Dashboard
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\User;
 use App\Models\Trip;
 use App\Models\Booking;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+#[Title('Dashboard')]
+class extends Component {
     public function with(): array
     {
         return [
@@ -21,9 +26,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Dashboard</x-slot:title>
-    <x-slot:heading>Dashboard</x-slot:heading>
+<x-slot:heading>Dashboard</x-slot:heading>
+
+<div>
 
     <!-- KPI Cards -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -170,4 +175,4 @@ new class extends Component {
             </div>
         @endif
     </div>
-</x-layouts.admin>
+</div>

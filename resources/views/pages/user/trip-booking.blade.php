@@ -1,11 +1,19 @@
 <?php
 // Livewire 4 SFC — User\TripBooking
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Trip;
 use App\Models\Booking;
 use App\Models\Challenge;
 
-new class extends Component {
+new
+#[Layout('layouts::user')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title("Book — {$this->trip->title}");
+    }
+
     public Trip $trip;
     public array $selectedChallenges = [];
     public ?int $primaryChallenge = null;
@@ -96,8 +104,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.user>
-    <x-slot:title>Book — {{ $trip->title }}</x-slot:title>
+<div>
 
     <div class="max-w-2xl">
         <div class="mb-5">
@@ -219,4 +226,4 @@ new class extends Component {
         </form>
         @endif
     </div>
-</x-layouts.user>
+</div>

@@ -1,11 +1,17 @@
 <?php
 // Livewire 4 SFC — Public\HomePage
-// No PHP class body needed for a purely presentational page
-?>
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-<x-layouts.public>
-    <x-slot:title>TheTrain | Your Journey to Restoration</x-slot:title>
+new
+#[Layout('layouts::public')]
+#[Title('TheTrain | Your Journey to Restoration')]
+class extends Component {
+    //
+}; ?>
 
+<div>
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-[#fbf9f6]/80 backdrop-blur-md border-b border-[#c1c8c2]/30 shadow-sm transition-all duration-300" id="main-nav">
         <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 max-w-7xl mx-auto">
@@ -316,4 +322,4 @@
             }
         });
     </script>
-</x-layouts.public>
+</div>

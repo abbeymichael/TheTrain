@@ -1,12 +1,20 @@
 <?php
 // Livewire 4 SFC — Specialist\TripRoster
 // Security: specialist can only view participants in their assigned challenge track(s) for this trip
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Trip;
 use App\Models\TripSpecialist;
 use App\Models\Booking;
 
-new class extends Component {
+new
+#[Layout('layouts::specialist')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title("Roster — {$this->trip->title}");
+    }
+
     public Trip $trip;
     public ?int $challengeId = null;
     public $assignments;
@@ -49,8 +57,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.specialist>
-    <x-slot:title>Roster — {{ $trip->title }}</x-slot:title>
+<div>
 
     <div class="mb-5">
         <a href="{{ route('specialist.dashboard') }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -143,4 +150,4 @@ new class extends Component {
             @endforeach
         </div>
     @endif
-</x-layouts.specialist>
+</div>

@@ -1,12 +1,17 @@
 <?php
 // Livewire 4 SFC — Admin\AnalyticsPanel
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\Booking;
 use App\Models\Challenge;
 use App\Models\User;
 use App\Models\Trip;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+#[Title('Analytics')]
+class extends Component {
     public function with(): array
     {
         $totalRevenue       = Booking::where('status', 'confirmed')->sum('final_price');
@@ -51,9 +56,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Analytics</x-slot:title>
-    <x-slot:heading>Analytics</x-slot:heading>
+<x-slot:heading>Analytics</x-slot:heading>
+
+<div>
 
     <!-- KPI Row -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -202,4 +207,4 @@ new class extends Component {
             </div>
         </div>
     </div>
-</x-layouts.admin>
+</div>

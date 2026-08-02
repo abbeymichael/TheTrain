@@ -1,9 +1,17 @@
 <?php
 // Livewire 4 SFC — Admin\TripShow
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Trip;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title($this->trip->title);
+    }
+
     public Trip $trip;
 
     public function mount(Trip $trip): void
@@ -19,9 +27,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>{{ $trip->title }}</x-slot:title>
-    <x-slot:heading>Trip Detail</x-slot:heading>
+<x-slot:heading>Trip Detail</x-slot:heading>
+
+<div>
 
     <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
         <a href="{{ route('admin.trips') }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -225,4 +233,4 @@ new class extends Component {
             </div>
         </div>
     </div>
-</x-layouts.admin>
+</div>

@@ -1,10 +1,15 @@
 <?php
 // Livewire 4 SFC — User\Dashboard
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\Booking;
 use App\Models\Trip;
 
-new class extends Component {
+new
+#[Layout('layouts::user')]
+#[Title('My Dashboard')]
+class extends Component {
     public function with(): array
     {
         $user = auth()->user();
@@ -19,8 +24,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.user>
-    <x-slot:title>My Dashboard</x-slot:title>
+<div>
 
     <!-- Welcome -->
     <div class="mb-8">
@@ -127,4 +131,4 @@ new class extends Component {
             </a>
         </div>
     @endif
-</x-layouts.user>
+</div>

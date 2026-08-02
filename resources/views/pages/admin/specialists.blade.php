@@ -1,10 +1,15 @@
 <?php
 // Livewire 4 SFC — Admin\SpecialistsTable
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\WithPagination;
 use App\Models\User;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+#[Title('Specialists')]
+class extends Component {
     use WithPagination;
 
     public string $search = '';
@@ -53,9 +58,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Specialists</x-slot:title>
-    <x-slot:heading>Specialists</x-slot:heading>
+<x-slot:heading>Specialists</x-slot:heading>
+
+<div>
 
     @if (session('success'))
         <div class="mb-4 flex items-center gap-2 bg-[#f0faf5] border border-[#c6ebd5] text-[#2e4a3d] text-sm px-4 py-3 rounded-lg">
@@ -171,4 +176,4 @@ new class extends Component {
             </div>
         @endif
     </div>
-</x-layouts.admin>
+</div>

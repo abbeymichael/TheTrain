@@ -1,12 +1,20 @@
 <?php
 // Livewire 4 SFC — Admin\TripEditor (create + edit)
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use Livewire\WithFileUploads;
 use App\Models\Trip;
 use App\Models\TripSeries;
 use App\Models\Challenge;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title(($this->isEditing ? 'Edit Trip' : 'New Trip'));
+    }
+
     use WithFileUploads;
 
     // Mode
@@ -122,9 +130,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>{{ $isEditing ? 'Edit Trip' : 'New Trip' }}</x-slot:title>
-    <x-slot:heading>{{ $isEditing ? 'Edit Trip' : 'Create Trip' }}</x-slot:heading>
+<x-slot:heading>{{ $isEditing ? 'Edit Trip' : 'Create Trip' }}</x-slot:heading>
+
+<div>
 
     <div class="mb-4">
         <a href="{{ route('admin.trips') }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -330,4 +338,4 @@ new class extends Component {
             </a>
         </div>
     </form>
-</x-layouts.admin>
+</div>

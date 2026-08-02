@@ -1,9 +1,14 @@
 <?php
 // Livewire 4 SFC — User\ProfileBuilder
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\Profile;
 
-new class extends Component {
+new
+#[Layout('layouts::user')]
+#[Title('My Profile')]
+class extends Component {
     public string $first_name = '';
     public string $last_name = '';
     public string $date_of_birth = '';
@@ -69,8 +74,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.user>
-    <x-slot:title>My Profile</x-slot:title>
+<div>
 
     <div class="max-w-2xl">
         <div class="mb-6">
@@ -186,4 +190,4 @@ new class extends Component {
             </button>
         </form>
     </div>
-</x-layouts.user>
+</div>

@@ -1,9 +1,17 @@
 <?php
 // Livewire 4 SFC — User\TripDetails
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Booking;
 
-new class extends Component {
+new
+#[Layout('layouts::user')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title($this->booking->trip?->title);
+    }
+
     public Booking $booking;
 
     public function mount(int $trip): void
@@ -15,8 +23,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.user>
-    <x-slot:title>{{ $booking->trip?->title }}</x-slot:title>
+<div>
 
     <div class="mb-5">
         <a href="{{ route('user.trips') }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -119,4 +126,4 @@ new class extends Component {
             </div>
         @endif
     </div>
-</x-layouts.user>
+</div>

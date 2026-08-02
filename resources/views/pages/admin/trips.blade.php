@@ -1,10 +1,15 @@
 <?php
 // Livewire 4 SFC — Admin\TripsManager
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\WithPagination;
 use App\Models\Trip;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+#[Title('Trips')]
+class extends Component {
     use WithPagination;
 
     public string $search = '';
@@ -40,9 +45,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Trips</x-slot:title>
-    <x-slot:heading>Trips</x-slot:heading>
+<x-slot:heading>Trips</x-slot:heading>
+
+<div>
 
     @if (session('success'))
         <div class="mb-4 flex items-center gap-2 bg-[#f0faf5] border border-[#c6ebd5] text-[#2e4a3d] text-sm px-4 py-3 rounded-lg">
@@ -156,4 +161,4 @@ new class extends Component {
             <div class="px-6 py-4 border-t border-[#e4e7e5]">{{ $trips->links() }}</div>
         @endif
     </div>
-</x-layouts.admin>
+</div>

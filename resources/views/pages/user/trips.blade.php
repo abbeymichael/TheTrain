@@ -1,9 +1,14 @@
 <?php
 // Livewire 4 SFC — User\MyTrips
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\Booking;
 
-new class extends Component {
+new
+#[Layout('layouts::user')]
+#[Title('My Trips')]
+class extends Component {
     public string $statusFilter = '';
 
     public function with(): array
@@ -18,8 +23,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.user>
-    <x-slot:title>My Trips</x-slot:title>
+<div>
 
     <div class="mb-6 flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
         <div>
@@ -121,4 +125,4 @@ new class extends Component {
             <div class="mt-6">{{ $bookings->links() }}</div>
         @endif
     @endif
-</x-layouts.user>
+</div>

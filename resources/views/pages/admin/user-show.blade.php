@@ -1,10 +1,18 @@
 <?php
 // Livewire 4 SFC — Admin\UserReviewPanel
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\User;
 use App\Models\Booking;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title($this->user->name);
+    }
+
     public User $user;
     public string $note = '';
 
@@ -42,9 +50,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>{{ $user->name }}</x-slot:title>
-    <x-slot:heading>User Review</x-slot:heading>
+<x-slot:heading>User Review</x-slot:heading>
+
+<div>
 
     <div class="mb-4">
         <a href="{{ route('admin.users') }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -220,4 +228,4 @@ new class extends Component {
             </div>
         </div>
     </div>
-</x-layouts.admin>
+</div>

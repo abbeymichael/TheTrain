@@ -1,9 +1,17 @@
 <?php
 // Livewire 4 SFC — Public\TripShow
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Trip;
 
-new class extends Component {
+new
+#[Layout('layouts::public')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title("{$this->trip->title} — TheTrain");
+    }
+
     public Trip $trip;
 
     public function mount(Trip $trip): void
@@ -12,8 +20,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.public>
-    <x-slot:title>{{ $trip->title }} — TheTrain</x-slot:title>
+<div>
 
     <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 bg-[#fbf9f6]/90 backdrop-blur-md border-b border-[#c1c8c2]/30 shadow-sm">
@@ -201,4 +208,4 @@ new class extends Component {
             <p class="text-[12px] text-[#727973]">© {{ date('Y') }} TheTrain Platform. Your journey to restoration starts here.</p>
         </div>
     </footer>
-</x-layouts.public>
+</div>

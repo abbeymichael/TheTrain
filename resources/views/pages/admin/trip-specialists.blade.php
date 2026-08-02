@@ -1,11 +1,19 @@
 <?php
 // Livewire 4 SFC — Admin\TripSpecialistAssigner
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
 use App\Models\Trip;
 use App\Models\TripSpecialist;
 use App\Models\User;
 
-new class extends Component {
+new
+#[Layout('layouts::admin')]
+class extends Component {
+    public function render()
+    {
+        return $this->view()->title("Assign Specialists — {$this->trip->title}");
+    }
+
     public Trip $trip;
     public int $specialist_id = 0;
     public int $challenge_id = 0;
@@ -68,9 +76,9 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.admin>
-    <x-slot:title>Assign Specialists — {{ $trip->title }}</x-slot:title>
-    <x-slot:heading>Specialist Assignment</x-slot:heading>
+<x-slot:heading>Specialist Assignment</x-slot:heading>
+
+<div>
 
     <div class="mb-4">
         <a href="{{ route('admin.trip.show', $trip) }}" class="inline-flex items-center gap-1.5 text-sm text-[#416352] hover:text-[#2e4a3d] transition-colors font-medium">
@@ -178,4 +186,4 @@ new class extends Component {
             @endif
         </div>
     </div>
-</x-layouts.admin>
+</div>

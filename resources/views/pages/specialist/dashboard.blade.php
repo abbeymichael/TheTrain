@@ -1,9 +1,14 @@
 <?php
 // Livewire 4 SFC — Specialist\Dashboard
-use Livewire\Volt\Component;
+use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\TripSpecialist;
 
-new class extends Component {
+new
+#[Layout('layouts::specialist')]
+#[Title('Dashboard')]
+class extends Component {
     public function with(): array
     {
         $user = auth()->user();
@@ -24,8 +29,7 @@ new class extends Component {
     }
 }; ?>
 
-<x-layouts.specialist>
-    <x-slot:title>Dashboard</x-slot:title>
+<div>
 
     <div class="mb-6">
         <h1 class="text-2xl font-semibold text-[#1b1c1a] mb-1" style="font-family:'Source Serif 4',serif;">
@@ -101,4 +105,4 @@ new class extends Component {
             </div>
         </div>
     @endif
-</x-layouts.specialist>
+</div>
