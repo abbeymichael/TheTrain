@@ -10,7 +10,8 @@ return new class extends Migration
      * Run the migrations.
      *
      * Logistics / care-context profile only — no matching-oriented fields
-     * (agent.md Section 7).
+     * (agent.md Section 7). Profiles are private by default and never shown
+     * publicly or to other participants (Section 9).
      */
     public function up(): void
     {
@@ -28,7 +29,8 @@ return new class extends Migration
             $table->json('dietary_restrictions')->nullable();
             $table->text('allergies')->nullable();
             $table->text('mobility_or_accessibility_needs')->nullable();
-            // Never shown publicly or to other participants (agent.md Section 9).
+            // Never shown publicly or to other participants (agent.md Section 9);
+            // no "public" option exists at all.
             $table->string('profile_visibility')->default('private');
             $table->timestamps();
         });

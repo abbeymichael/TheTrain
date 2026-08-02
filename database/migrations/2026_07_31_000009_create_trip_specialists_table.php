@@ -10,7 +10,8 @@ return new class extends Migration
      * Run the migrations.
      *
      * Pivot: which specialist runs which challenge track on a given trip.
-     * Assignment is entirely admin-driven (agent.md Section 5).
+     * Assignment is entirely admin-driven (agent.md Section 5) — there is no
+     * algorithmic matching and no participant-to-participant pairing.
      */
     public function up(): void
     {

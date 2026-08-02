@@ -10,6 +10,9 @@ return new class extends Migration
      * Run the migrations.
      *
      * Adds role/status columns per agent.md Section 2 & 7.
+     * role: user | specialist | admin
+     * status: pending -> approved -> (booking-eligible) / rejected
+     *         approved -> suspended -> reinstated -> approved
      */
     public function up(): void
     {
