@@ -6,128 +6,37 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>TheTrain | Your Journey to Restoration</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-primary": "#aacfba",
-                        "secondary-fixed-dim": "#b2c9dd",
-                        "surface-dim": "#dbdad7",
-                        "outline-variant": "#c1c8c2",
-                        "on-tertiary-fixed-variant": "#6f3728",
-                        "secondary-container": "#cbe3f7",
-                        "on-secondary-fixed-variant": "#334959",
-                        "secondary-fixed": "#cee5f9",
-                        "on-surface": "#1b1c1a",
-                        "on-primary-container": "#f5fff7",
-                        "inverse-on-surface": "#f2f0ed",
-                        "on-secondary-container": "#4f6576",
-                        "on-tertiary-fixed": "#380d03",
-                        "primary-container": "#5a7c6a",
-                        "on-primary": "#ffffff",
-                        "on-primary-fixed-variant": "#2c4d3d",
-                        "error-container": "#ffdad6",
-                        "on-primary-fixed": "#002114",
-                        "surface-container": "#efeeeb",
-                        "tertiary": "#884b3b",
-                        "on-background": "#1b1c1a",
-                        "on-error": "#ffffff",
-                        "primary": "#416352",
-                        "on-surface-variant": "#414844",
-                        "surface-container-high": "#eae8e5",
-                        "on-secondary": "#ffffff",
-                        "tertiary-fixed": "#ffdbd1",
-                        "primary-fixed-dim": "#aacfba",
-                        "surface": "#fbf9f6",
-                        "on-secondary-fixed": "#051e2c",
-                        "on-tertiary-container": "#fffbff",
-                        "primary-fixed": "#c6ebd5",
-                        "surface-bright": "#fbf9f6",
-                        "on-tertiary": "#ffffff",
-                        "surface-variant": "#e4e2df",
-                        "tertiary-container": "#a56351",
-                        "inverse-surface": "#30312f",
-                        "on-error-container": "#93000a",
-                        "surface-container-highest": "#e4e2df",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-tint": "#446554",
-                        "background": "#fbf9f6",
-                        "surface-container-low": "#f5f3f0",
-                        "outline": "#727973",
-                        "secondary": "#4b6172",
-                        "tertiary-fixed-dim": "#ffb5a1",
-                        "error": "#ba1a1a"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "container-margin": "32px",
-                        "gutter": "24px",
-                        "lg": "24px",
-                        "unit": "8px",
-                        "md": "16px",
-                        "sm": "8px",
-                        "xs": "4px",
-                        "xl": "40px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["\"Source Serif 4\""],
-                        "headline-md": ["\"Source Serif 4\""],
-                        "body-md": ["Manrope"],
-                        "headline-lg-mobile": ["\"Source Serif 4\""],
-                        "body-lg": ["Manrope"],
-                        "headline-lg": ["\"Source Serif 4\""],
-                        "label-md": ["Manrope"]
-                    },
-                    "fontSize": {
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
-                    }
-                },
-            },
-        }
-    </script>
 </head>
 
-<body class="font-body-md text-body-md bg-[#fbf9f6] text-[#1b1c1a] antialiased">
+<body class="bg-[#fbf9f6] text-[#1b1c1a] text-base leading-6 antialiased" style="font-family:'Manrope',sans-serif;">
     <!-- TopNavBar -->
     <nav
-        class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-4 md:px-container-margin py-md max-w-7xl mx-auto">
-            <a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">TheTrain</a>
-            <div class="hidden md:flex items-center space-x-lg">
-                <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-colors duration-300"
+        class="fixed top-0 w-full z-50 bg-[#fbf9f6]/80 backdrop-blur-md border-b border-[#c1c8c2]/30 shadow-sm transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 max-w-7xl mx-auto">
+            <a class="text-[32px] leading-[40px] font-semibold text-[#416352]" style="font-family:'Source Serif 4',serif;"
+                href="#">TheTrain</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#416352] border-b-2 border-[#416352] pb-1 transition-colors duration-300"
                     href="#">Browse Trips</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <a class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#414844] hover:text-[#416352] transition-colors duration-300"
                     href="#">How it Works</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <a class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#414844] hover:text-[#416352] transition-colors duration-300"
                     href="#">About</a>
             </div>
-            <div class="flex items-center space-x-md">
+            <div class="flex items-center space-x-4">
                 <button
-                    class="hidden md:block font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">Login</button>
+                    class="hidden md:block text-sm leading-5 font-semibold tracking-[0.01em] text-[#414844] hover:text-[#416352] transition-colors duration-300">Login</button>
                 <button
-                    class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md hover:opacity-90 active:scale-[0.98] transition-all shadow-md">Register</button>
+                    class="bg-[#416352] text-white px-6 py-2 rounded-full text-sm leading-5 font-semibold tracking-[0.01em] hover:opacity-90 active:scale-[0.98] transition-all shadow-md">Register</button>
                 <button
-                    class="md:hidden flex items-center justify-center p-2 text-on-surface-variant hover:text-primary transition-colors">
+                    class="md:hidden flex items-center justify-center p-2 text-[#414844] hover:text-[#416352] transition-colors">
                     <span class="material-symbols-outlined"
                         style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">menu</span>
                 </button>
@@ -137,32 +46,33 @@
     <!-- Hero Section -->
     <header class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden">
         <div class="absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#fbf9f6] via-[#fbf9f6]/60 to-transparent z-10"></div>
             <img class="w-full h-full object-cover"
-                data-alt="A cinematic, panoramic landscape of misty morning mountains reflecting in a still lake at sunrise. The lighting is ethereal and soft, with a palette of muted sage greens, warm creams, and pale blue horizons. The overall mood is deeply restorative, calm, and supportive, embodying a modern minimalist sanctuary aesthetic."
+                alt="A cinematic, panoramic landscape of misty morning mountains reflecting in a still lake at sunrise. The lighting is ethereal and soft, with a palette of muted sage greens, warm creams, and pale blue horizons. The overall mood is deeply restorative, calm, and supportive, embodying a modern minimalist sanctuary aesthetic."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA83OPeJy0hl2K6WVDX-bTOwnQKQLzzinehTcwTsB0Z97SVjW3vbE9eHJPcJmM5DFBpqF6Z2eOjDauxj6H3bl00ydjZtz2Byt_KKn9DaAIdc2Nz5E41TZ3cglKx9y-YwnhkbiDCC_kbg0NIofWALvxmJYT7x2ucEm_l4rDDHtRTcnVv6iRwds-wcoCZthDAfitI4DaiWfz-7dAsF5AkZ7rKxmlyLCSPBIuXbAmylEYNDGqZxwA_rphgog" />
         </div>
-        <div class="max-w-7xl mx-auto px-4 md:px-container-margin relative z-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-20">
             <div class="max-w-2xl">
                 <span
-                    class="inline-block font-label-md text-label-md text-primary tracking-widest bg-primary-fixed px-3 py-1 rounded-full mb-md">RESTORATIVE
+                    class="inline-block text-sm leading-5 font-semibold tracking-[0.01em] tracking-widest text-[#416352] bg-[#c6ebd5] px-3 py-1 rounded-full mb-4">RESTORATIVE
                     RETREATS</span>
                 <h1
-                    class="font-display-lg text-4xl md:text-5xl lg:text-display-lg mb-lg leading-tight text-on-surface transition-all">
-                    Your Journey to <br /><span class="italic text-primary-container">Restoration</span> Starts Here
+                    class="text-4xl md:text-5xl lg:text-[48px] lg:leading-[56px] font-semibold lg:tracking-[-0.02em] mb-6 leading-tight text-[#1b1c1a] transition-all"
+                    style="font-family:'Source Serif 4',serif;">
+                    Your Journey to <br /><span class="italic text-[#5a7c6a]">Restoration</span> Starts Here
                 </h1>
-                <p class="font-body-lg text-base md:text-body-lg text-on-surface-variant mb-xl max-w-lg transition-all">
+                <p class="text-base md:text-lg text-[#414844] mb-10 max-w-lg transition-all">
                     Discover curated support retreats designed to provide emotional safety, steady guidance, and a
                     supportive community for your personal growth.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-md">
-                    <a class="bg-primary text-on-primary px-xl py-lg rounded-xl font-label-md text-label-md flex items-center justify-center gap-sm hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] transition-all duration-300 shadow-[0_4px_14px_0_rgba(0,0,0,0.1)]"
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a class="bg-[#416352] text-white px-10 py-6 rounded-xl text-sm font-semibold tracking-[0.01em] flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] transition-all duration-300 shadow-[0_4px_14px_0_rgba(0,0,0,0.1)]"
                         href="#trips">
                         Browse Upcoming Trips
                         <span class="material-symbols-outlined"
                             style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">arrow_forward</span>
                     </a>
-                    <a class="bg-surface border border-outline text-on-surface px-xl py-lg rounded-xl font-label-md text-label-md flex items-center justify-center gap-sm hover:bg-surface-container-low transition-all duration-300"
+                    <a class="bg-[#fbf9f6] border border-[#727973] text-[#1b1c1a] px-10 py-6 rounded-xl text-sm font-semibold tracking-[0.01em] flex items-center justify-center gap-2 hover:bg-[#f5f3f0] transition-all duration-300"
                         href="#how">
                         How it Works
                     </a>
@@ -171,91 +81,95 @@
         </div>
     </header>
     <!-- Features Section: Bento Grid -->
-    <section class="py-xl bg-surface-container-low">
-        <div class="max-w-7xl mx-auto px-4 md:px-container-margin">
-            <div class="text-center mb-xl">
-                <h2 class="font-headline-lg text-3xl md:text-headline-lg mb-md text-on-surface">Built for Your Wellbeing
+    <section class="py-10 bg-[#f5f3f0]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-[32px] md:leading-[40px] font-semibold mb-4 text-[#1b1c1a]"
+                    style="font-family:'Source Serif 4',serif;">Built for Your Wellbeing
                 </h2>
-                <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">We prioritize your
+                <p class="text-base text-[#414844] max-w-xl mx-auto">We prioritize your
                     emotional safety with intentional spaces and expert care.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <!-- Feature 1 -->
                 <div
-                    class="lg:col-span-8 bg-surface p-xl rounded-xl border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] group">
+                    class="lg:col-span-8 bg-[#fbf9f6] p-10 rounded-xl border border-[#c1c8c2]/30 hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] group">
                     <div class="flex flex-col h-full">
                         <div
-                            class="bg-primary-fixed w-14 h-14 rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-primary text-3xl"
+                            class="bg-[#c6ebd5] w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-[#416352] text-3xl"
                                 style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">psychology</span>
                         </div>
-                        <h3 class="font-headline-md text-2xl md:text-headline-md mb-md">A Supportive Environment</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-lg">
+                        <h3 class="text-2xl md:text-[24px] md:leading-[32px] font-medium mb-4"
+                            style="font-family:'Source Serif 4',serif;">A Supportive Environment</h3>
+                        <p class="text-base text-[#414844] mb-6 max-w-lg">
                             Every aspect of our retreats is curated to feel like a deep breath. From the serene
                             locations to the paced activities, we create a sanctuary where you can truly let go and
                             focus on healing.
                         </p>
                         <div class="mt-auto h-48 md:h-64 w-full rounded-lg overflow-hidden">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                data-alt="An interior view of a minimalist meditation room with large windows overlooking a lush forest. The floor is covered in soft woven mats, and a single wooden bench sits in the center. Light filters through linen curtains, creating soft shadows across the warm sand-colored walls. A peaceful, supportive, and modern aesthetic."
+                                alt="An interior view of a minimalist meditation room with large windows overlooking a lush forest. The floor is covered in soft woven mats, and a single wooden bench sits in the center. Light filters through linen curtains, creating soft shadows across the warm sand-colored walls. A peaceful, supportive, and modern aesthetic."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtFMXFp-ZacjYTWK02yuj0Y97ATd_k9PBUBIIJM1vSJf0r4o50Kz0_PJ9Z8APyo_dUfz7JJ0cfxHtcY51kTYqGasHZQpePGQILe1eJlU_aWTEk7uXECFkImFyQZcd1IL7t8Yg7aSyA0DOGOE1peRxWhrApVqk3gEl54eNAjZgHPuDB3O6U-HkEHTEFsy7YKN3kx23WLMuK6coo6vwzQ6WLnafxZ7NHSfYqNUffKRy1kFTVik4KryqA" />
                         </div>
                     </div>
                 </div>
                 <!-- Feature 2 -->
                 <div
-                    class="lg:col-span-4 bg-primary text-on-primary p-xl rounded-xl border border-primary/20 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between overflow-hidden relative">
+                    class="lg:col-span-4 bg-[#416352] text-white p-10 rounded-xl border border-[#416352]/20 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between overflow-hidden relative">
                     <div class="relative z-10">
-                        <div class="bg-on-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-lg">
-                            <span class="material-symbols-outlined text-on-primary text-3xl"
+                        <div class="bg-white/10 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-white text-3xl"
                                 style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">groups</span>
                         </div>
-                        <h3 class="font-headline-md text-2xl md:text-headline-md mb-md text-on-primary">Matched
+                        <h3 class="text-2xl md:text-[24px] md:leading-[32px] font-medium mb-4 text-white"
+                            style="font-family:'Source Serif 4',serif;">Matched
                             Specialists</h3>
-                        <p class="font-body-md text-body-md opacity-90">
+                        <p class="text-base opacity-90">
                             Receive guidance from professionals specifically matched to your unique journey and needs.
                         </p>
                     </div>
-                    <div class="mt-xl relative z-10">
-                        <ul class="space-y-md">
+                    <div class="mt-10 relative z-10">
+                        <ul class="space-y-4">
                             <li
-                                class="flex items-center gap-md bg-on-primary/5 p-md rounded-lg hover:bg-on-primary/10 transition-colors cursor-default">
-                                <div class="w-10 h-10 rounded-full bg-primary-fixed-dim shrink-0"></div>
-                                <span class="font-label-md">Certified Facilitators</span>
+                                class="flex items-center gap-4 bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors cursor-default">
+                                <div class="w-10 h-10 rounded-full bg-[#aacfba] shrink-0"></div>
+                                <span class="text-sm leading-5 font-semibold tracking-[0.01em]">Certified Facilitators</span>
                             </li>
                             <li
-                                class="flex items-center gap-md bg-on-primary/5 p-md rounded-lg hover:bg-on-primary/10 transition-colors cursor-default">
-                                <div class="w-10 h-10 rounded-full bg-secondary-fixed shrink-0"></div>
-                                <span class="font-label-md">Wellness Experts</span>
+                                class="flex items-center gap-4 bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors cursor-default">
+                                <div class="w-10 h-10 rounded-full bg-[#cee5f9] shrink-0"></div>
+                                <span class="text-sm leading-5 font-semibold tracking-[0.01em]">Wellness Experts</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- Feature 3 -->
                 <div
-                    class="lg:col-span-12 bg-surface p-xl rounded-xl border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] flex flex-col md:flex-row items-center gap-xl group">
+                    class="lg:col-span-12 bg-[#fbf9f6] p-10 rounded-xl border border-[#c1c8c2]/30 hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] flex flex-col md:flex-row items-center gap-10 group">
                     <div class="flex-1">
                         <div
-                            class="bg-tertiary-fixed w-14 h-14 rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-tertiary text-3xl"
+                            class="bg-[#ffdbd1] w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-[#884b3b] text-3xl"
                                 style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">spa</span>
                         </div>
-                        <h3 class="font-headline-md text-2xl md:text-headline-md mb-md">All-Inclusive Care</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant">
+                        <h3 class="text-2xl md:text-[24px] md:leading-[32px] font-medium mb-4"
+                            style="font-family:'Source Serif 4',serif;">All-Inclusive Care</h3>
+                        <p class="text-base text-[#414844]">
                             We handle every logistical detail so you can remain fully present in your restoration
                             process. From organic meals to comfortable accommodations and local transport, your focus
                             remains entirely on your growth and community.
                         </p>
                     </div>
-                    <div class="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-md">
-                        <div class="h-40 md:h-48 bg-surface-container-high rounded-lg overflow-hidden">
+                    <div class="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="h-40 md:h-48 bg-[#eae8e5] rounded-lg overflow-hidden">
                             <img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                                data-alt="A close-up shot of a beautifully prepared organic meal on a handmade ceramic plate, featuring vibrant seasonal vegetables and grains. The lighting is warm and inviting, set on a rustic wooden table with a soft sage-colored napkin. Minimalist and high-end editorial style."
+                                alt="A close-up shot of a beautifully prepared organic meal on a handmade ceramic plate, featuring vibrant seasonal vegetables and grains. The lighting is warm and inviting, set on a rustic wooden table with a soft sage-colored napkin. Minimalist and high-end editorial style."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVt3lGMmnnc6WfEdA4NlUlijs906ED3p2hg-gAY2RdQqZn0Qt5CWLHpKGjDWPlUBVDKEEnRi_Rw_vhUoWTOfHn5wogoS-1MBYIpZmnj6Gv1sho39HhtSakkCHF94p3y7EYE4-BnzoqWFsav-zJEJ42ci5bhpowvnc3ilpHTmooJFhKTJdbwa7-RiuWL9KlN3mS536j2gn6Hs_wiYLahScJq6Tn2gm1FXeeovNzaRI-0sw_uO1PGzJ9FA" />
                         </div>
-                        <div class="h-40 md:h-48 bg-surface-container-high rounded-lg overflow-hidden">
+                        <div class="h-40 md:h-48 bg-[#eae8e5] rounded-lg overflow-hidden">
                             <img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                                data-alt="A tranquil bedroom setup in a luxury retreat, featuring crisp white linen bedding, a small vase of wildflowers on a wooden nightstand, and soft morning light streaming through an open window. The aesthetic is clean, minimalist, and deeply calming."
+                                alt="A tranquil bedroom setup in a luxury retreat, featuring crisp white linen bedding, a small vase of wildflowers on a wooden nightstand, and soft morning light streaming through an open window. The aesthetic is clean, minimalist, and deeply calming."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmxWIniH0EV3yC-Dl_tnFOeUsxQ8EM4CpV7mVmUVxHqLfkGSGur-GN7Q6orcpsYsLDCOaz4_DGyAxqR1BdhGBVSoW982l2c_Yl_ZwHxMA-FTP2ccC0NApbvnNIcuPLoeAPETCX1GQt3RFGUFGwa44IczWQmOC0VNzUtDnj1hdJVujsnNmowihMe0rpH2fvEUrwL6g64lYampFCMmzGwg6vhvyGfQC8hC8nGbL4qIIIrDIAo8m4Xo742A" />
                         </div>
                     </div>
@@ -264,43 +178,50 @@
         </div>
     </section>
     <!-- How it Works Section -->
-    <section class="py-xl" id="how">
-        <div class="max-w-7xl mx-auto px-4 md:px-container-margin">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+    <section class="py-10" id="how">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <h2 class="font-headline-lg text-3xl md:text-headline-lg mb-lg">How Your Journey Unfolds</h2>
-                    <div class="space-y-xl">
+                    <h2 class="text-3xl md:text-[32px] md:leading-[40px] font-semibold mb-6"
+                        style="font-family:'Source Serif 4',serif;">How Your Journey Unfolds</h2>
+                    <div class="space-y-10">
                         <!-- Step 1 -->
-                        <div class="flex gap-lg group cursor-default">
+                        <div class="flex gap-6 group cursor-default">
                             <div
-                                class="shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-headline-md text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+                                class="shrink-0 w-12 h-12 rounded-full border-2 border-[#416352] flex items-center justify-center text-[24px] leading-[32px] font-medium text-[#416352] group-hover:bg-[#416352] group-hover:text-white transition-colors duration-300"
+                                style="font-family:'Source Serif 4',serif;">
                                 1</div>
                             <div>
-                                <h4 class="font-headline-md text-xl md:text-headline-md mb-sm">Find a Trip</h4>
-                                <p class="text-on-surface-variant">Browse our curated selection of upcoming retreats
+                                <h4 class="text-xl md:text-[24px] md:leading-[32px] font-medium mb-2"
+                                    style="font-family:'Source Serif 4',serif;">Find a Trip</h4>
+                                <p class="text-[#414844]">Browse our curated selection of upcoming retreats
                                     based on theme, location, or support focus.</p>
                             </div>
                         </div>
                         <!-- Step 2 -->
-                        <div class="flex gap-lg group cursor-default">
+                        <div class="flex gap-6 group cursor-default">
                             <div
-                                class="shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-headline-md text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+                                class="shrink-0 w-12 h-12 rounded-full border-2 border-[#416352] flex items-center justify-center text-[24px] leading-[32px] font-medium text-[#416352] group-hover:bg-[#416352] group-hover:text-white transition-colors duration-300"
+                                style="font-family:'Source Serif 4',serif;">
                                 2</div>
                             <div>
-                                <h4 class="font-headline-md text-xl md:text-headline-md mb-sm">Register &amp; Approve
+                                <h4 class="text-xl md:text-[24px] md:leading-[32px] font-medium mb-2"
+                                    style="font-family:'Source Serif 4',serif;">Register &amp; Approve
                                 </h4>
-                                <p class="text-on-surface-variant">Complete a brief orientation to ensure the retreat is
+                                <p class="text-[#414844]">Complete a brief orientation to ensure the retreat is
                                     the right match for your current needs.</p>
                             </div>
                         </div>
                         <!-- Step 3 -->
-                        <div class="flex gap-lg group cursor-default">
+                        <div class="flex gap-6 group cursor-default">
                             <div
-                                class="shrink-0 w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-headline-md text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+                                class="shrink-0 w-12 h-12 rounded-full border-2 border-[#416352] flex items-center justify-center text-[24px] leading-[32px] font-medium text-[#416352] group-hover:bg-[#416352] group-hover:text-white transition-colors duration-300"
+                                style="font-family:'Source Serif 4',serif;">
                                 3</div>
                             <div>
-                                <h4 class="font-headline-md text-xl md:text-headline-md mb-sm">Book &amp; Heal</h4>
-                                <p class="text-on-surface-variant">Finalize your spot and begin preparing for your
+                                <h4 class="text-xl md:text-[24px] md:leading-[32px] font-medium mb-2"
+                                    style="font-family:'Source Serif 4',serif;">Book &amp; Heal</h4>
+                                <p class="text-[#414844]">Finalize your spot and begin preparing for your
                                     guided transition into restoration.</p>
                             </div>
                         </div>
@@ -308,92 +229,93 @@
                 </div>
                 <div class="relative mt-8 md:mt-0">
                     <div
-                        class="bg-surface-container-highest rounded-3xl overflow-hidden aspect-square border border-outline-variant/30 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)]">
+                        class="bg-[#e4e2df] rounded-3xl overflow-hidden aspect-square border border-[#c1c8c2]/30 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)]">
                         <img class="w-full h-full object-cover"
-                            data-alt="An artistic photograph of two people walking slowly along a winding forest path in autumn. They are silhouetted against soft, golden sun-dappled trees. The mood is contemplative and peaceful. The composition uses the path to lead the eye through a serene, supportive landscape with high-key lighting."
+                            alt="An artistic photograph of two people walking slowly along a winding forest path in autumn. They are silhouetted against soft, golden sun-dappled trees. The mood is contemplative and peaceful. The composition uses the path to lead the eye through a serene, supportive landscape with high-key lighting."
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpERke5Gc693VADOnEv5E2TaI9W8x1moSog6OwIbycaTvQRTYw1e_9ak6U0_6RSWkVfCI5KyPEA13vu-zD6MxCAA_OFfTgXDgaP_HIU0RW48XtR72IXDCCiYefYCDVCcQkZs_gDUqiQ9m2jl6XqVDyUA09eU4Vw8qxER7zXmm0JbEoCCb8IXKZ5GJDDuzplpYkyviFN_8KY6LhsiU9bwfDdDCbtC3RvVnvEVBSJEXPc3o3AJJ4Xa5eVw" />
                     </div>
                     <!-- Floating Progress indicator -->
                     <div
-                        class="absolute -bottom-6 -left-2 md:-left-6 bg-surface p-lg rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-outline-variant/50 w-64 md:max-w-xs animate-[bounce_3s_infinite]">
-                        <div class="flex items-center gap-md mb-sm">
-                            <span class="material-symbols-outlined text-primary"
+                        class="absolute -bottom-6 -left-2 md:-left-6 bg-[#fbf9f6] p-6 rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-[#c1c8c2]/50 w-64 md:max-w-xs animate-[bounce_3s_infinite]">
+                        <div class="flex items-center gap-4 mb-2">
+                            <span class="material-symbols-outlined text-[#416352]"
                                 style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">fitbit_check_small</span>
-                            <span class="font-label-md text-primary">Support Track Active</span>
+                            <span class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#416352]">Support Track Active</span>
                         </div>
-                        <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
-                            <div class="bg-primary w-2/3 h-full rounded-full transition-all duration-1000 ease-in-out">
+                        <div class="w-full bg-[#eae8e5] h-2 rounded-full overflow-hidden">
+                            <div class="bg-[#416352] w-2/3 h-full rounded-full transition-all duration-1000 ease-in-out">
                             </div>
                         </div>
-                        <p class="text-[12px] mt-xs text-on-surface-variant text-right">Step 2 of 3</p>
+                        <p class="text-[12px] mt-1 text-[#414844] text-right">Step 2 of 3</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Testimonials Section -->
-    <section class="py-xl bg-primary-fixed">
-        <div class="max-w-7xl mx-auto px-4 md:px-container-margin">
-            <div class="text-center mb-xl">
-                <span class="material-symbols-outlined text-primary text-5xl opacity-30 mb-md"
+    <section class="py-10 bg-[#c6ebd5]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-10">
+                <span class="material-symbols-outlined text-[#416352] text-5xl opacity-30 mb-4"
                     style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">format_quote</span>
-                <h2 class="font-headline-lg text-3xl md:text-headline-lg text-on-primary-fixed">Voices of Healing</h2>
+                <h2 class="text-3xl md:text-[32px] md:leading-[40px] font-semibold text-[#002114]"
+                    style="font-family:'Source Serif 4',serif;">Voices of Healing</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Testimonial 1 -->
                 <div
-                    class="bg-surface p-xl rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
-                    <p class="font-body-md text-body-md italic text-on-surface mb-lg">
+                    class="bg-[#fbf9f6] p-10 rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-[#c1c8c2]/30 hover:-translate-y-1 transition-transform duration-300">
+                    <p class="text-base italic text-[#1b1c1a] mb-6">
                         "I came to TheTrain feeling completely burnt out and lost. The quiet presence of the
                         facilitators and the intentional community gave me the space I needed to find my breath again."
                     </p>
-                    <div class="flex items-center gap-md">
-                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#eae8e5] overflow-hidden">
                             <img class="w-full h-full object-cover"
-                                data-alt="A professional, friendly headshot of a woman in her 40s with a warm, serene smile. The background is a soft-focus garden, and the lighting is natural and bright. High-quality editorial style portrait."
+                                alt="A professional, friendly headshot of a woman in her 40s with a warm, serene smile. The background is a soft-focus garden, and the lighting is natural and bright. High-quality editorial style portrait."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiXOeT30-m0opRgHP-B1U3eGv0oMoFzyWZGYJemxAUWKAAwTlXJip4i_AdoA3tPzEuVfT5w1a4Qw_HqPLGNjIj_nE2fgAp-rCutTwI-1DftOSzaT4eDtyHlitryK9zLfkK-8RSRSb1UDwjwmS6I36dNZs12UtOnNOnWag1U3zJqdcqVIMizAmeeze6IVUT2PjsMOU0Xocmimjfz2BFDcn-7Q04b5pmzMDs60RPRPJTxclmVW3FATc49w" />
                         </div>
                         <div>
-                            <p class="font-label-md text-primary">Sarah J.</p>
-                            <p class="text-[12px] text-on-surface-variant">Coastal Retreat Participant</p>
+                            <p class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#416352]">Sarah J.</p>
+                            <p class="text-[12px] text-[#414844]">Coastal Retreat Participant</p>
                         </div>
                     </div>
                 </div>
                 <!-- Testimonial 2 -->
                 <div
-                    class="bg-surface p-xl rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
-                    <p class="font-body-md text-body-md italic text-on-surface mb-lg">
+                    class="bg-[#fbf9f6] p-10 rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-[#c1c8c2]/30 hover:-translate-y-1 transition-transform duration-300">
+                    <p class="text-base italic text-[#1b1c1a] mb-6">
                         "Everything was handled for me. For the first time in years, I didn't have to be 'the person in
                         charge.' The restoration I found here was deep and lasting."
                     </p>
-                    <div class="flex items-center gap-md">
-                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#eae8e5] overflow-hidden">
                             <img class="w-full h-full object-cover"
-                                data-alt="A close-up portrait of a thoughtful man with a calm expression, looking slightly away from the camera. The lighting is soft and side-lit, creating a gentle, empathetic mood. The aesthetic is modern, minimalist, and deeply human."
+                                alt="A close-up portrait of a thoughtful man with a calm expression, looking slightly away from the camera. The lighting is soft and side-lit, creating a gentle, empathetic mood. The aesthetic is modern, minimalist, and deeply human."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXHhfenh1CdETAssSP2ATqzPCBPqtsAO3IpDAkAAsaNwRbevSmLAgXKEKPvnvmXUxGOJ-RKKq-3aTwyFkFhoLy9bkyD-0Mf0xJf0Lh3EFmw3pLtCEl6s0-U-82TLqjoqPqY5Dxww98XdrpJLrQUKjhufFwI-CyFwx5Z317Wu-jIR3QeQTNJ-yykZocKD8FIn2Ab7SD6a-LdH2Zrpzk6tzdKdJKlYlEnTdTdTpjaoJOf3ehhtcSJ7flNA" />
                         </div>
                         <div>
-                            <p class="font-label-md text-primary">Marcus L.</p>
-                            <p class="text-[12px] text-on-surface-variant">Mountain Cabin Participant</p>
+                            <p class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#416352]">Marcus L.</p>
+                            <p class="text-[12px] text-[#414844]">Mountain Cabin Participant</p>
                         </div>
                     </div>
                 </div>
                 <!-- Testimonial 3 -->
                 <div
-                    class="bg-surface p-xl rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-outline-variant/30 hover:-translate-y-1 transition-transform duration-300">
-                    <p class="font-body-md text-body-md italic text-on-surface mb-lg">
+                    class="bg-[#fbf9f6] p-10 rounded-xl shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)] border border-[#c1c8c2]/30 hover:-translate-y-1 transition-transform duration-300">
+                    <p class="text-base italic text-[#1b1c1a] mb-6">
                         "The community aspect was surprisingly powerful. Meeting others on a similar track helped me
                         realize I wasn't alone. It truly felt like a sanctuary."
                     </p>
-                    <div class="flex items-center gap-md">
-                        <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#eae8e5] overflow-hidden">
                             <img class="w-full h-full object-cover"
-                                data-alt="A warm, candid portrait of a smiling person with graying hair, wearing a soft wool sweater. The light is warm and late-afternoon golden. The background is a blurred domestic, peaceful setting. Soft and trustworthy aesthetic."
+                                alt="A warm, candid portrait of a smiling person with graying hair, wearing a soft wool sweater. The light is warm and late-afternoon golden. The background is a blurred domestic, peaceful setting. Soft and trustworthy aesthetic."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRNAscSstUcWwSUvSb2dXdYXSX55Amj-GK1TXL4wJR-nPz-nUYNN25wzakoj6_ZgdG1UtbP9_V7Z5aytSd3QsYWMCNKDl7767axveXRGpnydsQiYLxe6jLJQNdqbxqzul1trhv4CHXgc6R_5-jhBZ7__q1V8jlUqQCC6fNx7y3z4Xfc8fqatzF6q3vRvBpSFrqE75i5yekF2dun7LOpRvowCP3Xbeq8Yi5SPu3f1kWTQMgZacOxJQPNw" />
                         </div>
                         <div>
-                            <p class="font-label-md text-primary">Elena T.</p>
-                            <p class="text-[12px] text-on-surface-variant">Spring Equinox Participant</p>
+                            <p class="text-sm leading-5 font-semibold tracking-[0.01em] text-[#416352]">Elena T.</p>
+                            <p class="text-[12px] text-[#414844]">Spring Equinox Participant</p>
                         </div>
                     </div>
                 </div>
@@ -401,81 +323,83 @@
         </div>
     </section>
     <!-- Final Call to Action -->
-    <section class="py-xl relative">
-        <div class="max-w-4xl mx-auto px-4 md:px-container-margin text-center">
-            <h2 class="font-display-lg text-4xl md:text-display-lg mb-lg text-on-surface">Ready to take the first step?
+    <section class="py-10 relative">
+        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-4xl md:text-[48px] md:leading-[56px] font-semibold mb-6 text-[#1b1c1a]"
+                style="font-family:'Source Serif 4',serif;">Ready to take the first step?
             </h2>
-            <p class="font-body-lg text-base md:text-body-lg text-on-surface-variant mb-xl">
+            <p class="text-base md:text-lg text-[#414844] mb-10">
                 Join our next cohort of seekers and begin your restoration journey today. Our specialists are waiting to
                 welcome you.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-md">
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <button
-                    class="bg-primary text-on-primary px-xl py-lg rounded-xl font-label-md text-label-md hover:scale-[1.02] hover:shadow-lg transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)]">
+                    class="bg-[#416352] text-white px-10 py-6 rounded-xl text-sm font-semibold tracking-[0.01em] hover:scale-[1.02] hover:shadow-lg transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(84,106,123,0.12)]">
                     Register for a Retreat
                 </button>
                 <button
-                    class="bg-surface border border-outline text-on-surface px-xl py-lg rounded-xl font-label-md text-label-md hover:bg-surface-container-low hover:border-primary transition-all duration-300">
+                    class="bg-[#fbf9f6] border border-[#727973] text-[#1b1c1a] px-10 py-6 rounded-xl text-sm font-semibold tracking-[0.01em] hover:bg-[#f5f3f0] hover:border-[#416352] transition-all duration-300">
                     Talk to a Guide
                 </button>
             </div>
         </div>
     </section>
     <!-- Footer -->
-    <footer class="w-full mt-xl bg-surface-container-low border-t border-outline-variant/50">
+    <footer class="w-full mt-10 bg-[#f5f3f0] border-t border-[#c1c8c2]/50">
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-xl px-4 md:px-container-margin py-xl max-w-7xl mx-auto">
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-4 md:px-8 py-10 max-w-7xl mx-auto">
             <div class="col-span-1 sm:col-span-2 md:col-span-1">
-                <div class="font-headline-md text-headline-md text-primary mb-4">TheTrain</div>
-                <p class="text-on-surface-variant font-body-md mb-md">Guided retreats for emotional restoration and
+                <div class="text-[24px] leading-[32px] font-medium text-[#416352] mb-4"
+                    style="font-family:'Source Serif 4',serif;">TheTrain</div>
+                <p class="text-[#414844] text-base mb-4">Guided retreats for emotional restoration and
                     community-led growth.</p>
-                <div class="flex gap-md">
-                    <a class="text-primary hover:text-primary-container transition-colors duration-300" href="#"><span
+                <div class="flex gap-4">
+                    <a class="text-[#416352] hover:text-[#5a7c6a] transition-colors duration-300" href="#"><span
                             class="material-symbols-outlined"
                             style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">share</span></a>
-                    <a class="text-primary hover:text-primary-container transition-colors duration-300" href="#"><span
+                    <a class="text-[#416352] hover:text-[#5a7c6a] transition-colors duration-300" href="#"><span
                             class="material-symbols-outlined"
                             style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">mail</span></a>
                 </div>
             </div>
             <div>
-                <h5 class="font-label-md text-label-md font-bold mb-md">Quick Links</h5>
-                <ul class="space-y-sm">
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <h5 class="text-sm leading-5 font-semibold tracking-[0.01em] font-bold mb-4">Quick Links</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-[#414844] hover:text-[#416352] transition-colors duration-300"
                             href="#">Browse Trips</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    <li><a class="text-[#414844] hover:text-[#416352] transition-colors duration-300"
                             href="#">How it Works</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    <li><a class="text-[#414844] hover:text-[#416352] transition-colors duration-300"
                             href="#">About</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-label-md text-label-md font-bold mb-md">Support</h5>
-                <ul class="space-y-sm">
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <h5 class="text-sm leading-5 font-semibold tracking-[0.01em] font-bold mb-4">Support</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-[#414844] hover:text-[#416352] transition-colors duration-300"
                             href="#">Privacy Policy</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    <li><a class="text-[#414844] hover:text-[#416352] transition-colors duration-300"
                             href="#">Terms of Service</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    <li><a class="text-[#414844] hover:text-[#416352] transition-colors duration-300"
                             href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-label-md text-label-md font-bold mb-md">Newsletter</h5>
-                <p class="text-[12px] text-on-surface-variant mb-md">Receive gentle reminders and retreat updates.</p>
-                <div class="flex gap-xs">
+                <h5 class="text-sm leading-5 font-semibold tracking-[0.01em] font-bold mb-4">Newsletter</h5>
+                <p class="text-[12px] text-[#414844] mb-4">Receive gentle reminders and retreat updates.</p>
+                <div class="flex gap-1">
                     <input
-                        class="bg-surface border-none rounded-lg text-label-md flex-1 focus:ring-2 focus:ring-primary transition-shadow duration-300 w-full"
+                        class="bg-[#fbf9f6] border-none rounded-lg text-sm leading-5 font-semibold tracking-[0.01em] flex-1 focus:ring-2 focus:ring-[#416352] transition-shadow duration-300 w-full"
                         placeholder="Email address" type="email" />
                     <button
-                        class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors duration-300"><span
+                        class="bg-[#416352] text-white p-2 rounded-lg hover:bg-[#5a7c6a] transition-colors duration-300"><span
                             class="material-symbols-outlined"
                             style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">send</span></button>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 md:px-container-margin py-lg border-t border-outline-variant/30 text-center">
-            <p class="text-on-surface-variant text-[12px]">© 2024 TheTrain Platform. Your journey to restoration starts
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-6 border-t border-[#c1c8c2]/30 text-center">
+            <p class="text-[#414844] text-[12px]">© 2024 TheTrain Platform. Your journey to restoration starts
                 here.</p>
         </div>
     </footer>
@@ -484,13 +408,13 @@
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.classList.add('py-sm');
-                nav.classList.remove('py-md');
-                nav.classList.add('bg-surface/95');
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+                nav.classList.add('bg-[#fbf9f6]/95');
             } else {
-                nav.classList.add('py-md');
-                nav.classList.remove('py-sm');
-                nav.classList.remove('bg-surface/95');
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+                nav.classList.remove('bg-[#fbf9f6]/95');
             }
         });
     </script>
