@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TheTrain — Global App Styles
+   Tailwind CSS v4 via @tailwindcss/vite plugin
+   ============================================================ */
+
+@theme {
+    /* Brand colour tokens — use these in Tailwind utilities */
+    --color-brand-forest:   #416352;
+    --color-brand-mint:     #c6ebd5;
+    --color-brand-cream:    #fbf9f6;
+    --color-brand-warm:     #f5f3f0;
+    --color-brand-sand:     #eae8e5;
+    --color-brand-muted:    #414844;
+    --color-brand-dark:     #1b1c1a;
+    --color-brand-sidebar:  #1b2e25;
+
+    /* Typography tokens */
+    --font-serif: 'Source Serif 4', ui-serif, Georgia, serif;
+    --font-sans:  'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base resets */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Livewire loading indicator */
+[wire\:loading] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Focus ring — consistent across all interactive elements */
+:focus-visible {
+    outline: 2px solid #416352;
+    outline-offset: 2px;
+}
+
+/* Scrollbar (webkit) — subtle styling for admin sidebar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c8c2;
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #9ba39c;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
